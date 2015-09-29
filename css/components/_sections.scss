@@ -35,3 +35,11 @@ section {
   height: 100px;
   width: 100px;
 }
+
+#site-header {
+  &.scrolled-past {
+    position: fixed;
+    height: 110px;
+    background-color: white;
+  }
+}

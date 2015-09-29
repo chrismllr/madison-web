@@ -8,14 +8,13 @@
 
 <template name="Application">
   <div class='site'>
-    {{> yield "header"}}
-    {{> yield}}
-    {{> yield "footer"}}
+    {{> Header}}
+    {{> Projects}}
   </div>
 </template>
 
-<template name="HeaderTemp">
-  <section class='intro intro--full intro--center-text'>
+<template name="Header">
+  <section class='intro intro--full intro--center-text' id='site-header'>
     <div class="round-img" style="background-image: url(/images/madison.png);"></div>
     <h1>Madison McDaniel</h1>
     <h5 class="uppercase">Art Director</h5>
