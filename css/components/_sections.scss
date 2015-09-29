@@ -26,19 +26,28 @@ section {
 	}
 }
 
-.round-img {
-  margin: 0 auto;
-  background-size: cover;
-  background-position: 57% 50%;
-  border-radius: 100%;
-  border: 2px solid;
-  height: 100px;
-  width: 100px;
+.intro {
+  &__hero {
+    margin: 0 auto;
+    background-size: cover;
+    background-position: 57% 50%;
+    border-radius: 100%;
+    border: 2px solid;
+    height: 100px;
+    width: 100px;
+  }
+
+  &__text,
+  &__script {
+    transition: .5s ease-in-out;
+  }
+
+  &__script {
+    height: 20px;
+  }
 }
 
 #site-header {
-  position: fixed;
-
   &.scrolled-past {
     height: 110px;
     background-color: white;

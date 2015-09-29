@@ -15,9 +15,17 @@
 
 <template name="Header">
   <section class='intro intro--full intro--center-text' id='site-header'>
-    <div class="round-img" style="background-image: url(/images/madison.png);"></div>
+    <div class="intro__hero" style="background-image: url(/images/madison.png);"></div>
     <h1>Madison McDaniel</h1>
-    <h5 class="uppercase">Art Director</h5>
+
+    <button type="button" name="swap-text" id='swap-text'>
+      {{#if swapForText}}
+        <h5 class="intro__text uppercase">Art Director</h5>
+      {{else}}
+        <img class="intro__script" src="/images/art-director-japanese.svg" alt="" />
+      {{/if}}
+    </button>
+
     <hr />
   </section>
 </template>

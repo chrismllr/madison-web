@@ -1,6 +1,4 @@
 if (Meteor.isClient) {
-  Session.setDefault('counter', 0);
-
   Template.Projects.helpers({
     projects: [
       {id: 1, title: 'Project One', colors: {primary: '#A7D7B0', secondary: '#5BA36A'}},
@@ -12,6 +10,23 @@ if (Meteor.isClient) {
       {id: 7, title: 'Project Two', colors: {primary: '#CBE7F5', secondary: '#07B5E5'}},
       {id: 8, title: 'Project Two', colors: {primary: '#CBE7F5', secondary: '#07B5E5'}}
     ]
+  });
+
+  Template.Header.onCreated(function() {
+    this.swapForText = new ReactiveVar(false);
+  });
+
+  Template.Header.helpers({
+    swapForText: function() {
+      return Template.instance().swapForText.get();
+    }
+  });
+
+  Template.Header.events({
+    'click #swap-text': function() {
+      var val = Template.instance().swapForText.get();
+      Template.instance().swapForText.set(!val);
+    }
   });
 
   Template.Header.onRendered(function() {
