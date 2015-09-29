@@ -31,8 +31,9 @@ if (Meteor.isClient) {
         var height = this.$siteHeader.innerHeight();
 
         this.$window.on('scroll', function() {
-          if (_this.$window.scrollTop() > height) {
+          if (_this.$window.scrollTop() >= height - 110) {
             _this.$siteHeader.addClass('scrolled-past');
+            _this.$window.scrollTop(110);
           } else {
             _this.$siteHeader.removeClass('scrolled-past');
           }

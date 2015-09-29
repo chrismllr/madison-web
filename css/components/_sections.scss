@@ -37,9 +37,11 @@ section {
 }
 
 #site-header {
+  position: fixed;
+
   &.scrolled-past {
-    position: fixed;
     height: 110px;
     background-color: white;
+    padding: 0;
   }
 }
