@@ -1,5 +1,7 @@
 <head>
   <title>Madison McDaniel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link href='https://fonts.googleapis.com/css?family=Patua+One|Satisfy|Source+Sans+Pro:400,300,600,700,300italic,400italic' rel='stylesheet' type='text/css'>
 </head>
 
@@ -17,15 +19,10 @@
   <section class='intro intro--full intro--center-text' id='site-header'>
     <div class="intro__hero" style="background-image: url(/images/madison.png);"></div>
     <h1>Madison McDaniel</h1>
-
-    <button type="button" name="swap-text" id='swap-text'>
-      {{#if swapForText}}
-        <h5 class="intro__text uppercase">Art Director</h5>
-      {{else}}
-        <img class="intro__script" src="/images/art-director-japanese.svg" alt="" />
-      {{/if}}
-    </button>
-
+    <div class="intro__swap">
+      <img class="intro__script" src="/images/art-director-japanese.svg" alt="" />
+      <h5 class="intro__text uppercase">Art Director</h5>
+    </div>
     <hr />
   </section>
 </template>

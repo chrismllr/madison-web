@@ -30,7 +30,7 @@ $size_base_small: .875em;
 
 h1,
 h2 {
-  @include secondary_font();
+  @include script_font();
   color: palette(gray,x-dark);
   margin: .5em 0;
 }
