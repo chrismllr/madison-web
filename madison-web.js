@@ -30,7 +30,7 @@ if (Meteor.isClient) {
   });
 
   Template.Header.onRendered(function() {
-    var application = {
+    var header = {
       init: function() {
         this.cacheDom();
         this.scrollEvents();
@@ -46,9 +46,8 @@ if (Meteor.isClient) {
         var height = this.$siteHeader.innerHeight();
 
         this.$window.on('scroll', function() {
-          if (_this.$window.scrollTop() >= height - 110) {
+          if (_this.$window.scrollTop() >= height - 80) {
             _this.$siteHeader.addClass('scrolled-past');
-            _this.$window.scrollTop(110);
           } else {
             _this.$siteHeader.removeClass('scrolled-past');
           }
@@ -56,7 +55,7 @@ if (Meteor.isClient) {
       }
     };
 
-    application.init();
+    header.init();
   });
 }
 
