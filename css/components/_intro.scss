@@ -2,6 +2,7 @@
   height: 100%;
 
   h1 {
+    font-size: 10vh;
     @include gmq(palm) {
       font-size: 3em;
     }
@@ -16,7 +17,6 @@
   }
 
   &__hero {
-    z-index: 100;
     margin: 0 auto;
     background-size: cover;
     background-position: 57% 50%;
@@ -28,18 +28,19 @@
 
   &__text,
   &__script {
-    z-index: 100;
+    transition: .3s ease-in-out;
   }
 
   &__text {
-    transition: .3s ease-in-out;
-    opacity: 0;
+    opacity: 1;
+    font-weight: 400;
+    letter-spacing: .15em;
     transform: translateY(-100%);
   }
 
   &__script {
     height: 20px;
-    opacity: 1;
+    opacity: 0;
   }
 
   &__swap {
